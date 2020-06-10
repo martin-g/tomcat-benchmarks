@@ -17,7 +17,14 @@
 package info.mgsolutions.tomcat.benchmarks.datetime;
 
 import org.apache.tomcat.util.http.FastHttpDateFormat;
-import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.annotations.Benchmark;
+import org.openjdk.jmh.annotations.BenchmarkMode;
+import org.openjdk.jmh.annotations.Group;
+import org.openjdk.jmh.annotations.GroupThreads;
+import org.openjdk.jmh.annotations.Measurement;
+import org.openjdk.jmh.annotations.Mode;
+import org.openjdk.jmh.annotations.OperationsPerInvocation;
+import org.openjdk.jmh.annotations.Warmup;
 import org.openjdk.jmh.infra.Blackhole;
 
 @BenchmarkMode(Mode.All)
@@ -43,7 +50,6 @@ public class HttpDateFormatBenchmark {
 
     /**
      * Java 8 {@link java.time.format.DateTimeFormatter}
-     * @param blackhole
      */
     @Benchmark
     @Group("datetime")
