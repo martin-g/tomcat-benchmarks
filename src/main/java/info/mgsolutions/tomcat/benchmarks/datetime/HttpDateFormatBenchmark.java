@@ -27,7 +27,7 @@ import org.openjdk.jmh.annotations.OperationsPerInvocation;
 import org.openjdk.jmh.annotations.Warmup;
 import org.openjdk.jmh.infra.Blackhole;
 
-@BenchmarkMode(Mode.All)
+@BenchmarkMode(Mode.Throughput)
 @Warmup(iterations = 1)
 @Measurement(iterations = 1)
 @OperationsPerInvocation(HttpDateFormatBenchmark.CALL_COUNT)
